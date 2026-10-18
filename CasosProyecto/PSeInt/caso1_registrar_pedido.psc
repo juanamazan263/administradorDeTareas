@@ -40,7 +40,6 @@ Algoritmo sin_titulo
 		Si validacion=='no' Entonces
 			contador <- contador+1
 			Escribir 'ingrese nuevamente los datos del destinatario'
-			Escribir 'count', contador
 			// si los datos son correctos se enviara in mensaje a la pantalla que el proceso fue exitoso
 		SiNo
 			Escribir '======================================'

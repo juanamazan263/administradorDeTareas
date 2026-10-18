@@ -13,11 +13,9 @@ public class RegistroPedidos {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String nombreDestinatario, nombreRemitente, validacion, numeroDestinatario, numeroRemitente, direccion, validar, lugar;
-        int unidades, contador;
-        unidades=0;
-        validar="no";
-        contador=0;
+        String nombreDestinatario, nombreRemitente, correcto, numeroDestinatario, numeroRemitente, direccion, validar="no", lugar;
+        int unidades=0;
+        int contador=0;
         System.out.println("Regritre su pedido a continuacion");
         System.out.println("Ingrese los datos del remitente");
         System.out.println("Nombre");
@@ -36,7 +34,7 @@ public class RegistroPedidos {
             direccion=scanner.nextLine();
             System.out.println("Cuantas unidades va a registrar?");
             unidades=scanner.nextInt();
-            
+            scanner.nextLine();
             System.out.println("Los datos ingresados para el pedido son:");
             System.out.println("Estableciomiento: "+lugar);
             System.out.println("Nombre: "+nombreDestinatario);
@@ -44,18 +42,19 @@ public class RegistroPedidos {
             System.out.println("Doreccion: "+direccion);
             System.out.println("Cantidad: "+unidades+" unidades");
             System.out.println("Indique ni los datos son correctos[si/no]");
-            validacion=scanner.nextLine();
-            /*
-            if (validacion == "no") {
+            correcto=scanner.nextLine();
+            if (correcto.trim().equalsIgnoreCase("no")){
                 contador=contador+1;
                 System.out.println("Ingrese nuevamente los datos para la entrega");
+                System.out.println(contador);
             } else {
                 System.out.println("Su pedido ha sido registrado con exito!");
-            }
-            */
-        } while (validacion != validar || contador==20);
-            
-        
-        
-    }    
+            }  
+        } while (correcto.trim().equalsIgnoreCase(validar) && contador < 2);        
+        if (contador == 2) {
+            System.out.println("Ha alcanzado el limite de intentos permitidos");
+            System.out.println("Vuelva a intentarlo mas tarde");
+        }
+        scanner.close();
+    }
 }
