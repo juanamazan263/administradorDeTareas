@@ -10,7 +10,6 @@ package com.mycompany.actividadproyectojava;
  */
 import java.util.Scanner;
 public class RegistroPedidos {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String nombreDestinatario, nombreRemitente, correcto, numeroDestinatario, numeroRemitente, direccion, validar="no", lugar;
