@@ -24,8 +24,8 @@ public class Ejercicio02 {
             }    
         }
         int[] reporte = {masBajo, masAlto, suma};
-        System.out.println("Valor total de la compra: "+reporte[2]);
-        System.out.println("Valor del producto mas barato: "+reporte[0]);
-        System.out.println("Valor del producto mas caro: "+reporte[1]);
+        System.out.println("Valor total de la compra: $"+reporte[2]);
+        System.out.println("Valor del producto mas barato: $"+reporte[0]);
+        System.out.println("Valor del producto mas caro: $"+reporte[1]);
     }
 }
