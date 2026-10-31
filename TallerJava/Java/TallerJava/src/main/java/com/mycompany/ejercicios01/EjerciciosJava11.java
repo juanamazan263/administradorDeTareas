@@ -13,17 +13,23 @@ public class EjerciciosJava11 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double num1, num2, resta, suma, multiplicacion, division, modulo;
+        //ENTRADAS
         System.out.println("Escriba el primer numero");
         num1=scanner.nextDouble();
         System.out.println("Escriba el segundo numero");
         num2=scanner.nextDouble();
+        //PROCESOS 
+        //SUMA
         suma=num1+num2;
+        //RESTA
         if (num1>num2) {
             resta=num1-num2;
         } else {
             resta=num2-num1;
         }
+        //MULTIPLICACION
         multiplicacion=num1*num2;
+        //DIVISION
         if (num1>num2) {
             division=num1/num2;
         } else {
